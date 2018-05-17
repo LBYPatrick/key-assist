@@ -1,0 +1,44 @@
+﻿    <Window x:Class="key_assist.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:key_assist"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Topmost="True"
+        Opacity="1.0"
+        Title="MainWindow" Height="{DynamicResource {x:Static SystemParameters.VirtualScreenHeightKey}}" Width="{DynamicResource {x:Static SystemParameters.VirtualScreenWidthKey}}">
+    <Window.Resources>
+        <System:Double x:Key="MARGIN_BUTTONS">10</System:Double>
+        <System:Double x:Key="TILE_SIDE_LENGTH">128</System:Double>
+    </Window.Resources>
+    <Window.Background>
+        <SolidColorBrush Color="Black" Opacity="0.4">
+        </SolidColorBrush>
+    </Window.Background>
+        
+    <Grid x:Name="MainGrid">
+
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="button_1" Content="CAPS" HorizontalAlignment="Center" Height="{StaticResource TILE_SIDE_LENGTH}" VerticalAlignment="Center" Width="{StaticResource TILE_SIDE_LENGTH}" Grid.Column="0">
+                <Button.Margin>
+                    <Thickness Top="{StaticResource MARGIN_BUTTONS}" Bottom="{StaticResource MARGIN_BUTTONS}" Left="{StaticResource MARGIN_BUTTONS}" Right="{StaticResource MARGIN_BUTTONS}"/>
+                </Button.Margin>
+            </Button>
+            <Button x:Name="button_2" Content="NUM" HorizontalAlignment="Center" Height="{StaticResource TILE_SIDE_LENGTH}" VerticalAlignment="Center" Width="{StaticResource TILE_SIDE_LENGTH}" Grid.Column="1" Margin="{Binding Mode=OneWay, Source={StaticResource MARGIN_BUTTONS}}"/>
+        </Grid>
+    </Grid>
+</Window>

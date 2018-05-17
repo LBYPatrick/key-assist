@@ -1,0 +1,15 @@
+C:\Code\key-assist\key-assist\bin\Release\key-assist.exe.config
+C:\Code\key-assist\key-assist\bin\Release\key-assist.exe
+C:\Code\key-assist\key-assist\bin\Release\key-assist.pdb
+C:\Code\key-assist\key-assist\obj\Release\MainWindow.g.cs
+C:\Code\key-assist\key-assist\obj\Release\App.g.cs
+C:\Code\key-assist\key-assist\obj\Release\key-assist_MarkupCompile.cache
+C:\Code\key-assist\key-assist\obj\Release\key-assist_MarkupCompile.lref
+C:\Code\key-assist\key-assist\obj\Release\MainWindow.baml
+C:\Code\key-assist\key-assist\obj\Release\key-assist.g.resources
+C:\Code\key-assist\key-assist\obj\Release\key_assist.Properties.Resources.resources
+C:\Code\key-assist\key-assist\obj\Release\key-assist.csproj.GenerateResource.cache
+C:\Code\key-assist\key-assist\obj\Release\key-assist.csproj.CoreCompileInputs.cache
+C:\Code\key-assist\key-assist\obj\Release\key-assist.exe
+C:\Code\key-assist\key-assist\obj\Release\key-assist.pdb
+C:\Code\key-assist\key-assist\obj\Release\key-assist.csprojResolveAssemblyReference.cache
