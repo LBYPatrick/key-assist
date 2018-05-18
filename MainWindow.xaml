@@ -33,12 +33,12 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="button_1" Content="CAPS" HorizontalAlignment="Center" Height="{StaticResource TILE_SIDE_LENGTH}" VerticalAlignment="Center" Width="{StaticResource TILE_SIDE_LENGTH}" Grid.Column="0">
-                <Button.Margin>
+            <Image x:Name="caps_tile" HorizontalAlignment="Center" Height="{StaticResource TILE_SIDE_LENGTH}" VerticalAlignment="Center" Width="{StaticResource TILE_SIDE_LENGTH}" Grid.Column="0">
+                <Image.Margin>
                     <Thickness Top="{StaticResource MARGIN_BUTTONS}" Bottom="{StaticResource MARGIN_BUTTONS}" Left="{StaticResource MARGIN_BUTTONS}" Right="{StaticResource MARGIN_BUTTONS}"/>
-                </Button.Margin>
-            </Button>
-            <Button x:Name="button_2" Content="NUM" HorizontalAlignment="Center" Height="{StaticResource TILE_SIDE_LENGTH}" VerticalAlignment="Center" Width="{StaticResource TILE_SIDE_LENGTH}" Grid.Column="1" Margin="{Binding Mode=OneWay, Source={StaticResource MARGIN_BUTTONS}}"/>
+                </Image.Margin>
+            </Image>
+            <Image x:Name="num_tile" HorizontalAlignment="Center" Height="{StaticResource TILE_SIDE_LENGTH}" VerticalAlignment="Center" Width="{StaticResource TILE_SIDE_LENGTH}" Grid.Column="1" Margin="{Binding Mode=OneWay, Source={StaticResource MARGIN_BUTTONS}}"/>
         </Grid>
     </Grid>
 </Window>

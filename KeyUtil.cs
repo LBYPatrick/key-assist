@@ -54,10 +54,10 @@ namespace key_assist
         }
 
         public static bool
-        IsKeyboardChanged(int keyIndex) {
+        IsKeyboardChanged() {
 
-            foreach(bool key in _difference) {
-                if (key == true) return true;
+            for(int i = 0; i < _difference.Length; ++i) {
+                if (_difference[i] == true) return true;
             }
             return false;
         }
