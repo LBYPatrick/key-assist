@@ -21,7 +21,7 @@ namespace key_assist {
     /// </summary>
     public partial class MainWindow : Window {
 
-        public const int SCAN_INTERVAL = 15;
+        public const int SCAN_INTERVAL = 20;
         public const int WINDOW_KEEP_TIME = 1500;
         public const double TRANSPARENCY = 0.7;
         public const int NUM_TILES = 2;
@@ -65,10 +65,10 @@ namespace key_assist {
         InitWindow() {
 
             //Set appropriate window size
-            _window_height = (int)(SystemParameters.VirtualScreenHeight / 7);
-            _window_width = (int)(SystemParameters.VirtualScreenWidth * NUM_TILES * 0.1);
+            _window_height = (int)(SystemParameters.VirtualScreenHeight / 8);
+            _window_width = (int)(SystemParameters.VirtualScreenWidth * tile_grid.ColumnDefinitions.Count * 0.08);
             this.Top = SystemParameters.VirtualScreenHeight / 2 + 200;
-            this.Left = SystemParameters.VirtualScreenWidth / 2 - _window_width / 2;
+            this.Left = SystemParameters.VirtualScreenWidth/2 - _window_width/2;
             this.Height = _window_height;
             this.Width = _window_width;
 
@@ -82,12 +82,13 @@ namespace key_assist {
             //Now hide the window
             this.ShowActivated = false;
             this.Opacity = 0;
+            this.ShowInTaskbar = false;
             _window_visible = false;
 
         }
 
         public void
-        InitIcons() {
+        InitTiles() {
 
             _tile_length = _window_height * 3 / 5;
             _tile_margin = _window_height / 10;
@@ -106,10 +107,10 @@ namespace key_assist {
             //Enable Anti-aliasing
             Util.EnableAA(caps_tile);
             Util.EnableAA(num_tile);
-            
+
             //Put to center
-            Util.PlaceElement(caps_tile, 0, 0, 20);
-            Util.PlaceElement(num_tile, 0, 0, 20);
+            Util.PlaceElement(caps_tile, 0, 0, 10);
+            Util.PlaceElement(num_tile, 0, 0, 10);
             
         }
 
@@ -117,7 +118,7 @@ namespace key_assist {
         MainWindow() {
                 InitializeComponent();
                 InitWindow();
-                InitIcons();
+                InitTiles();
                 ListenKeys();
         }
 
